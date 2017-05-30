@@ -1,0 +1,6 @@
+<h2><%= link_to prop_image.title, prop_image_path(prop_image) %></h2>
+
+<p><%= truncate(prop_image.body, length: 150) %></p>
+
+<p><%= link_to 'Edit', edit_prop_image_path(prop_image) %></p>
+<hr>

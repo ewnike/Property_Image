@@ -1,0 +1,10 @@
+<%= link_to 'All Property Images', prop_images_path %>
+<h1><%= @prop_image.title %></h1>
+
+<%= image_tag(@prop_image.image.url, alt: 'Image') if @prop_image.image? %>
+
+<p><%= @prop_image.body %></p>
+
+<p><%= link_to 'Edit', edit_prop_image_path(@prop_image) %></p>
+
+<%= link_to(image_tag(@prop_image.image.thumb.url, alt: 'Image'), @prop_image.image.url, target: '_blank') if @prop_image.image? %>
